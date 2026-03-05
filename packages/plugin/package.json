@@ -1,20 +1,25 @@
 {
-  "name": "vcli",
+  "name": "@ssota-labs/onlycmd-plugin",
   "version": "0.1.0",
   "type": "module",
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "bin": {
-    "vcli": "./dist/cli.js"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./github": {
+      "types": "./dist/github/index.d.ts",
+      "default": "./dist/github/index.js"
+    },
+    "./jira": {
+      "types": "./dist/jira/index.d.ts",
+      "default": "./dist/jira/index.js"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
@@ -22,9 +27,10 @@
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {},
+  "dependencies": {
+    "onlycmd": "workspace:*"
+  },
   "devDependencies": {
-    "@types/node": "^22.0.0",
     "@eslint/js": "^9.15.0",
     "@typescript-eslint/eslint-plugin": "^8.18.1",
     "@typescript-eslint/parser": "^8.18.1",

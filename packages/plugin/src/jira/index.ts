@@ -1,4 +1,4 @@
-import { defineModule } from "vcli";
+import { defineModule } from "../../../core/dist";
 
 /**
  * Jira plugin (stub). Full implementation coming later.

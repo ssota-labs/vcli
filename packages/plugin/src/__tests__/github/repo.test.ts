@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { createRuntime } from "vcli";
+import { createRuntime } from "../../../../core/dist/index.js";
 import { github } from "../../github/index.js";
 
 describe("github plugin: repo commands", () => {

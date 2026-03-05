@@ -1,4 +1,4 @@
-import type { RunContext } from "vcli";
+import type { RunContext } from "../../../../core/dist/index.js";
 import { githubGet, githubPost, getToken } from "../api.js";
 
 export function createPrHandlers(config: { token?: string }) {

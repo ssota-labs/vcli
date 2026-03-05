@@ -4,7 +4,7 @@
  */
 export const skill = {
   summary: "GitHub operations — issues, PRs, repos",
-  full: `# GitHub Virtual CLI (gh)
+  full: `# GitHub (gh)
 
 ## Issues
 - \`gh issue list --repo <owner/repo> [--state open|closed|all] [--limit N] [--labels L1,L2]\`

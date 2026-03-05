@@ -1,4 +1,4 @@
-import { defineModule } from "vcli";
+import { defineModule } from "../../../core/dist/index.js";
 import { createIssueHandlers } from "./commands/issue.js";
 import { createPrHandlers } from "./commands/pr.js";
 import { createRepoHandlers } from "./commands/repo.js";

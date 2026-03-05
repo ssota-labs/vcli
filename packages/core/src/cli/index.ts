@@ -3,17 +3,17 @@ const args = process.argv.slice(2);
 const cmd = args[0];
 
 const help = `
-vcli - Virtual CLI for AI agents
+onlycmd - OnlyCMD for AI agents
 
 Usage:
-  vcli init              Scaffold project / config
-  vcli add <plugin>      Add a plugin (e.g. github, jira)
-  vcli list              List available plugins
+  onlycmd init              Scaffold project / config
+  onlycmd add <plugin>      Add a plugin (e.g. github, jira)
+  onlycmd list              List available plugins
 
 Examples:
-  vcli add github
-  vcli add jira
-  vcli list
+  onlycmd add github
+  onlycmd add jira
+  onlycmd list
 `;
 
 if (!cmd || cmd === "--help" || cmd === "-h") {
@@ -22,7 +22,7 @@ if (!cmd || cmd === "--help" || cmd === "-h") {
 }
 
 if (cmd === "init") {
-  console.log("Run: npm install vcli @ssota-labs/vcli-plugin");
+  console.log("Run: npm install onlycmd @ssota-labs/onlycmd-plugin");
   console.log("Then: createRuntime() and runtime.use(github({ token }))");
   process.exit(0);
 }
@@ -30,17 +30,17 @@ if (cmd === "init") {
 if (cmd === "add") {
   const plugin = args[1];
   if (!plugin) {
-    console.error("Usage: vcli add <plugin>");
+    console.error("Usage: onlycmd add <plugin>");
     process.exit(1);
   }
-  console.log(`To add ${plugin}: npm install @ssota-labs/vcli-plugin`);
+  console.log(`To add ${plugin}: npm install onlycmd @ssota-labs/onlycmd-plugin`);
   console.log(`Then: runtime.use(${plugin}({ ... }))`);
   process.exit(0);
 }
 
 if (cmd === "list") {
   console.log("Available plugins: github, jira (stub), linear (stub)");
-  console.log("Install: npm install @ssota-labs/vcli-plugin");
+  console.log("Install: npm install onlycmd @ssota-labs/onlycmd-plugin");
   process.exit(0);
 }
 
